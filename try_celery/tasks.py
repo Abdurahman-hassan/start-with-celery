@@ -12,6 +12,15 @@ def send_mass_email(recipient):
     return
 
 
+@shared_task
+def add_two_numbers(x, y):
+    print(x + y)
+    print("The number has been calculated")
+    time.sleep(5)
+    print("walk up from sleep")
+    return x + y
+
+
 @task
 def send_scheduled_emails():
     return "Hello"

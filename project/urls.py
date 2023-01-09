@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from try_celery.views import mass_email_view
+from try_celery.views import mass_email_view, add_two_number_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mass_email_view),
+    path('add/', add_two_number_view)
 ]
